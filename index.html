@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterloop - CI/CD Experts</title>
+    <style>
+        :root {
+            --primary-color: #2D3748;
+            --secondary-color: #4A5568;
+            --accent-color: #48BB78;
+            --text-color: #E2E8F0;
+            --light-bg: #F7FAFC;
+            --dark-text: #2D3748;
+        }
+        body, html {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .tagline {
+            font-size: 1.5em;
+            color: var(--accent-color);
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #38A169;
+        }
+        .contacts {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .contacts a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        .contacts a:hover {
+            color: var(--accent-color);
+        }
+        .contacts img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        section {
+            margin-bottom: 60px;
+            padding: 40px;
+            border-radius: 8px;
+        }
+        .light-section {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+        }
+        h2 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .service-item {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        #contatti {
+            text-align: center;
+        }
+        #contatti a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        #contatti a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Alterloop</div>
+            <nav>
+                <a href="#chi-siamo">Chi siamo</a>
+                <a href="#servizi">Servizi</a>
+                <a href="#contatti">Contatti</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="hero">
+                <h1>Trasforma il tuo sviluppo con CI/CD</h1>
+                <p class="tagline">Esperti in Continuous Integration e Continuous Delivery</p>
+                <a href="#contatti" class="cta-button">Contattaci</a>
+                
+                <div class="contacts">
+                    <a href="https://github.com/alterloop" target="_blank">
+                        <img src="/api/placeholder/24/24" alt="GitHub icon">
+                        GitHub
+                    </a>
+                    <a href="https://hub.docker.com/u/alterloop" target="_blank">
+                        <img src="/api/placeholder/24/24" alt="Docker icon">
+                        Docker
+                    </a>
+                    <a href="https://www.linkedin.com/company/alterloop" target="_blank">
+                        <img src="/api/placeholder/24/24" alt="LinkedIn icon">
+                        LinkedIn
+                    </a>
+                </div>
+            </section>
+
+            <section id="chi-siamo" class="light-section">
+                <h2>Chi siamo</h2>
+                <p>Alterloop è un'azienda leader nel settore CI/CD. Fondata da esperti DevOps, la nostra missione è ottimizzare i processi di sviluppo software delle aziende, garantendo consegne rapide e di alta qualità.</p>
+            </section>
+
+            <section id="servizi" class="light-section">
+                <h2>Servizi</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3>Implementazione CI/CD</h3>
+                        <p>Pipeline CI/CD personalizzate per il tuo stack tecnologico.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Consulenza DevOps</h3>
+                        <p>Miglioramento dei processi di sviluppo e operations.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Automazione dei test</h3>
+                        <p>Strategie di test automatizzati per la qualità del software.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contatti">
+                <h2>Contatti</h2>
+                <p>Per qualsiasi informazione, mandaci una mail qui: <a href="mailto:info@alterloop.com">info@alterloop.com</a></p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2024 Alterloop. Powered by Javanile</p>
+        </footer>
+    </div>
+</body>
+</html>
