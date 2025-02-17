@@ -3,7 +3,7 @@
 Public website
 
 * <https://alterloop.dev>
-* <https://javanile.github.io>
+* <https://alterloop.github.io>
 
 ----
 
