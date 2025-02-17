@@ -7,4 +7,4 @@ Public website
 
 ----
 
-© 2019-2021 Alterloop by Francesco Bianci ~ CI/CD Experts ~ DevOps Consultancy ~ Open Source Solutions
+© 2019-2025 Alterloop by Francesco Bianco ~ CI/CD Experts ~ DevOps Consultancy ~ Open Source Solutions
