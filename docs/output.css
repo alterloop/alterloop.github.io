@@ -1486,6 +1486,16 @@ input:checked + .toggle-bg {
   border-color: rgb(28 100 242 / var(--tw-border-opacity));
 }
 
+.border-orange-900 {
+  --tw-border-opacity: 1;
+  border-color: rgb(119 29 29 / var(--tw-border-opacity));
+}
+
+.border-orange-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(138 44 13 / var(--tw-border-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1687,12 +1697,12 @@ input:checked + .toggle-bg {
   font-weight: 600;
 }
 
-.font-medium {
-  font-weight: 500;
-}
-
 .font-bold {
   font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .font-extrabold {
@@ -1707,8 +1717,8 @@ input:checked + .toggle-bg {
   text-transform: uppercase;
 }
 
-.leading-none {
-  line-height: 1;
+.leading-\[1\.1\] {
+  line-height: 1.1;
 }
 
 .leading-tight {
@@ -2243,6 +2253,10 @@ input:checked + .toggle-bg {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+
+  .md\:leading-\[1\.1\] {
+    line-height: 1.1;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -2285,6 +2299,10 @@ input:checked + .toggle-bg {
 
   .lg\:mb-12 {
     margin-bottom: 3rem;
+  }
+
+  .lg\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .lg\:flex {
@@ -2419,6 +2437,14 @@ input:checked + .toggle-bg {
     padding-bottom: 6rem;
   }
 
+  .lg\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
+  .lg\:pt-24 {
+    padding-top: 6rem;
+  }
+
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -2477,5 +2503,9 @@ input:checked + .toggle-bg {
   .xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .xl\:leading-\[1\.1\] {
+    line-height: 1.1;
   }
 }

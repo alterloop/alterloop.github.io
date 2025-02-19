@@ -16,4 +16,6 @@ Implementazione CI/CD: "Pipeline CI/CD personalizzate per il tuo stack tecnologi
 Consulenza DevOps: "Miglioramento dei processi di sviluppo e operations."
 Automazione dei test: "Strategie di test automatizzati per la qualità del software."
 Contatti: Email: info@alterloop.com
-Footer: "© 2024 Alterloop. Powered by Javanile"
+
+Trasforma la tua azienda con l’approccio DevOps
+Alterloop ti aiuta a ottimizzare i processi aziendali, migliorare la qualità del software e ridurre i costi, introducendo pratiche DevOps su misura per la tua realtà. Senza l'onere di costi elevati e complessità inutili.
