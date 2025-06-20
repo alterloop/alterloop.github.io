@@ -544,8 +544,8 @@
     </section>
     <!-- End block -->
     <!-- Start block -->
-    <section class="bg-gray-50 dark:bg-gray-800">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+    <section class="bg-gray-50 dark:bg-gray-800" id="contatti">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-32 lg:px-6">
             <div class="max-w-screen-sm mx-auto text-center">
                 <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
                     Prenota una demo gratuita
@@ -560,7 +560,7 @@
         </div>
     </section>
     <!-- End block -->
-    <footer class="bg-white dark:bg-gray-800" id="contatti">
+    <footer class="bg-white dark:bg-gray-800">
         <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
             <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
                 <div>
@@ -701,6 +701,56 @@
         // Classi per stato attivo e inattivo
         const activeClasses = "text-white bg-orange-700 rounded lg:bg-transparent lg:text-orange-700 lg:p-0 dark:text-white";
         const inactiveClasses = "text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700";
+
+        // Funzione per impostare un link come attivo tramite href
+        function setActiveMenuItemByHref(href) {
+            const menuLinks = document.querySelectorAll('ul.flex a');
+
+            // Rimuovi lo stato attivo da tutti i link
+            menuLinks.forEach(link => {
+                link.className = `block py-2 pl-3 pr-4 ${inactiveClasses}`;
+                link.removeAttribute('aria-current');
+            });
+
+            // Trova e attiva il link corrispondente
+            const targetLink = Array.from(menuLinks).find(link => link.getAttribute('href') === href);
+            if (targetLink) {
+                targetLink.className = `block py-2 pl-3 pr-4 ${activeClasses}`;
+                targetLink.setAttribute('aria-current', 'page');
+            }
+        }
+
+        // Funzione per rilevare quale sezione è visibile
+        function getCurrentSection() {
+            const sections = ['perche-alterloop', 'prezzi', 'faq', 'contatti'];
+            const scrollPosition = window.scrollY + 100; // Offset per anticipare un po'
+
+            // Se siamo molto vicini al top, considera "Home"
+            if (window.scrollY < 100) {
+                return '#';
+            }
+
+            // Controlla ogni sezione
+            for (let sectionId of sections) {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    const elementTop = element.offsetTop;
+                    const elementBottom = elementTop + element.offsetHeight;
+
+                    if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+                        return `#${sectionId}`;
+                    }
+                }
+            }
+
+            return '#'; // Default a Home se nessuna sezione è trovata
+        }
+
+        // Listener per lo scroll manuale
+        function handleScroll() {
+            const currentSection = getCurrentSection();
+            setActiveMenuItemByHref(currentSection);
+        }
 
         // Funzione per smooth scroll
         function smoothScrollTo(targetId) {
