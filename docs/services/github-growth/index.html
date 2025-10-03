@@ -96,14 +96,15 @@
             width: 100%;
             aspect-ratio: 1;
             border-radius: 50%;
-            background: linear-gradient(135deg, #238636, #2ea043);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            font-weight: bold;
-            color: white;
+            overflow: hidden;
             margin-bottom: 1rem;
+            border: 3px solid #30363d;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .profile-card h2 {
@@ -441,7 +442,9 @@
 
 <div class="profile-section">
     <aside class="profile-card">
-        <div class="avatar">FB</div>
+        <div class="avatar">
+            <img src="https://github.com/francescobianco.png" alt="Francesco Bianco photo">
+        </div>
         <h2>Francesco Bianco</h2>
         <p class="role">GitHub Growth Consultant<br>DevOps Engineer</p>
         <div class="contact-item">📧 info.francescobianco@gmail.com</div>
